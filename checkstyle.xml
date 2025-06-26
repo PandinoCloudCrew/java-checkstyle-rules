@@ -687,7 +687,7 @@
       <property name="format" value="(TODO)|(FIXME)"/>
     </module>
     <module name="UncommentedMain">
-      <property name="excludedClasses" value="\.(Main|JavadocPropertiesGenerator)$"/>
+      <property name="excludedClasses" value="\.(Main|JavadocPropertiesGenerator).*$"/>
     </module>
     <module name="UpperEll"/>
 

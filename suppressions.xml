@@ -11,7 +11,9 @@
   <suppress checks="ClassDataAbstractionCoupling" files=".*Test.*\.java"/>
   <suppress checks="ExecutableStatementCount" files=".*Test.*\.java"/>
   <suppress checks="LambdaBodyLength" files=".*Test.*\.java"/>
-  <suppress checks="checkASCII" files=".*Test.*\.java"/>
+  <suppress checks="RegexpSinglelineJava" files=".*Test.*\.java"/>
+  <suppress checks="BooleanExpressionComplexity" files=".*Test.*\.java"/>
+  <suppress checks="CyclomaticComplexity" files=".*Test.*\.java"/>
 
   <!-- don't validate generated files -->
   <suppress id="lineLength" files="releasenotes.xml"/>
