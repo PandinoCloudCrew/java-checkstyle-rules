@@ -14,6 +14,7 @@
   <suppress checks="RegexpSinglelineJava" files=".*Test.*\.java"/>
   <suppress checks="BooleanExpressionComplexity" files=".*Test.*\.java"/>
   <suppress checks="CyclomaticComplexity" files=".*Test.*\.java"/>
+  <suppress checks="TodoComment" files=".*Test.*\.java"/>
 
   <!-- don't validate generated files -->
   <suppress id="lineLength" files="releasenotes.xml"/>
