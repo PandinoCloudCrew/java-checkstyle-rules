@@ -5,8 +5,25 @@
   "https://checkstyle.org/dtds/suppressions_1_2.dtd">
 
 <suppressions>
+  <!-- Spring @Configuration classes cannot be final (CGLIB proxies) -->
   <suppress checks="DesignForExtension" files=".*Configuration\.java"/>
+  <suppress checks="DesignForExtension" files=".*Config\.java"/>
+
+  <!-- Spring Boot application main class -->
+  <suppress checks="UncommentedMain" files=".*Application\.java"/>
+
+  <!-- OpenAPI/Swagger config requires many model classes -->
+  <suppress checks="ClassDataAbstractionCoupling" files=".*OpenApi.*\.java"/>
+
+  <!-- MapStruct mappers have overloaded methods by design -->
   <suppress checks="OverloadMethodsDeclarationOrder" files=".*Mapper\.java"/>
+
+  <!-- Allow PMD @SuppressWarnings annotations in specific patterns -->
+  <suppress checks="SuppressWarnings" files=".*Abstract.*Entity\.java"/>
+  <suppress checks="SuppressWarnings" files=".*Config\.java"/>
+  <suppress checks="SuppressWarnings" files=".*Test.*\.java"/>
+
+  <!-- Test files: relax complexity checks for test setup/teardown -->
   <suppress checks="ClassFanOutComplexity" files=".*Test.*\.java"/>
   <suppress checks="ClassDataAbstractionCoupling" files=".*Test.*\.java"/>
   <suppress checks="ExecutableStatementCount" files=".*Test.*\.java"/>
