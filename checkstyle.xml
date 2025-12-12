@@ -735,7 +735,8 @@
       <property name="format" value="^(id)|([a-z][a-z0-9][a-zA-Z0-9]+)$"/>
     </module>
     <module name="CatchParameterName">
-      <property name="format" value="^[a-z][a-z][a-zA-Z]+$"/>
+      <!-- Allow _ (JEP 443 unnamed pattern) or standard naming -->
+      <property name="format" value="^(_)|([a-z][a-z][a-zA-Z]+)$"/>
     </module>
     <module name="StaticVariableName">
       <property name="format" value="^(id)|([a-z][a-z0-9][a-zA-Z0-9]+)$"/>
