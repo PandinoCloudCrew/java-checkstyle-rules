@@ -251,13 +251,23 @@
     <module name="MissingOverride"/>
     <module name="PackageAnnotation"/>
     <module name="SuppressWarnings">
-      <property name="format" value="^((?!unchecked|deprecation|rawtypes|resource).)*$"/>
+      <!--
+        Allowed suppressions:
+        - javac: unchecked, deprecation, rawtypes, resource
+        - PMD (approved rules only, must include justification comment):
+          PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods,
+          PMD.AvoidDeeplyNestedIfStmts
+        Adding new PMD rules requires review and approval.
+      -->
+      <property name="format"
+        value="^((?!unchecked|deprecation|rawtypes|resource|PMD\.GodClass|PMD\.CyclomaticComplexity|PMD\.TooManyMethods|PMD\.AvoidDeeplyNestedIfStmts).)*$"/>
       <message key="suppressed.warning.not.allowed"
         value="The warning ''{0}'' cannot be suppressed at this location.
-           Only few javac warnings are allowed to suppress.
-           If try to suppress checkstyle/pmd/..... violation please do this in their config file.
-           If you try to suppress IntelliJ IDEA inspection,
-           please use javadoc block tag @noinspection"
+           Allowed suppressions: unchecked, deprecation, rawtypes, resource,
+           PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods, PMD.AvoidDeeplyNestedIfStmts.
+           PMD suppressions require a preceding comment explaining justification.
+           For other PMD rules, add exclusion to config/pmd/pmd.xml.
+           For IntelliJ inspections, use @noinspection javadoc tag."
       />
     </module>
     <module name="SuppressWarningsHolder"/>
