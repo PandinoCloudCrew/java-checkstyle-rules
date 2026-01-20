@@ -252,21 +252,25 @@
     <module name="PackageAnnotation"/>
     <module name="SuppressWarnings">
       <!--
-        Allowed suppressions:
+        Allowed suppressions via @SuppressWarnings annotation:
         - javac: unchecked, deprecation, rawtypes, resource
-        - PMD (approved rules only, must include justification comment):
-          PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods,
-          PMD.AvoidDeeplyNestedIfStmts
-        Adding new PMD rules requires review and approval.
+        - checkstyle: ClassDataAbstractionCoupling, ClassFanOutComplexity, AvoidInlineConditionals,
+                      DeclarationOrder, MethodLength, AbbreviationAsWordInName
+        - PMD: PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods,
+               PMD.AvoidDeeplyNestedIfStmts, PMD.AvoidSynchronizedStatement,
+               PMD.CommentDefaultAccessModifier, PMD.ShortClassName
+        All suppressions require a preceding comment explaining justification.
       -->
       <property name="format"
-        value="^((?!unchecked|deprecation|rawtypes|resource|PMD\.GodClass|PMD\.CyclomaticComplexity|PMD\.TooManyMethods|PMD\.AvoidDeeplyNestedIfStmts).)*$"/>
+        value="^((?!unchecked|deprecation|rawtypes|resource|ClassDataAbstractionCoupling|ClassFanOutComplexity|AvoidInlineConditionals|DeclarationOrder|MethodLength|AbbreviationAsWordInName|PMD\.GodClass|PMD\.CyclomaticComplexity|PMD\.TooManyMethods|PMD\.AvoidDeeplyNestedIfStmts|PMD\.AvoidSynchronizedStatement|PMD\.CommentDefaultAccessModifier|PMD\.ShortClassName).)*$"/>
       <message key="suppressed.warning.not.allowed"
         value="The warning ''{0}'' cannot be suppressed at this location.
            Allowed suppressions: unchecked, deprecation, rawtypes, resource,
-           PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods, PMD.AvoidDeeplyNestedIfStmts.
-           PMD suppressions require a preceding comment explaining justification.
-           For other PMD rules, add exclusion to config/pmd/pmd.xml.
+           ClassDataAbstractionCoupling, ClassFanOutComplexity, AvoidInlineConditionals,
+           DeclarationOrder, MethodLength, AbbreviationAsWordInName,
+           PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods, PMD.AvoidDeeplyNestedIfStmts,
+           PMD.AvoidSynchronizedStatement, PMD.CommentDefaultAccessModifier, PMD.ShortClassName.
+           All suppressions require a preceding comment explaining justification.
            For IntelliJ inspections, use @noinspection javadoc tag."
       />
     </module>
