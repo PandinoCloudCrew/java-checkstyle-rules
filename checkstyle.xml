@@ -258,18 +258,22 @@
                       DeclarationOrder, MethodLength, AbbreviationAsWordInName
         - PMD: PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods,
                PMD.AvoidDeeplyNestedIfStmts, PMD.AvoidSynchronizedStatement,
-               PMD.CommentDefaultAccessModifier, PMD.ShortClassName
+               PMD.CommentDefaultAccessModifier, PMD.ShortClassName,
+               PMD.AvoidInstantiatingObjectsInLoops, PMD.ImplicitFunctionalInterface,
+               PMD.LinguisticNaming, PMD.CouplingBetweenObjects, PMD.ShortVariable
         All suppressions require a preceding comment explaining justification.
       -->
       <property name="format"
-        value="^((?!unchecked|deprecation|rawtypes|resource|ClassDataAbstractionCoupling|ClassFanOutComplexity|AvoidInlineConditionals|DeclarationOrder|MethodLength|AbbreviationAsWordInName|PMD\.GodClass|PMD\.CyclomaticComplexity|PMD\.TooManyMethods|PMD\.AvoidDeeplyNestedIfStmts|PMD\.AvoidSynchronizedStatement|PMD\.CommentDefaultAccessModifier|PMD\.ShortClassName).)*$"/>
+        value="^((?!unchecked|deprecation|rawtypes|resource|ClassDataAbstractionCoupling|ClassFanOutComplexity|AvoidInlineConditionals|DeclarationOrder|MethodLength|AbbreviationAsWordInName|PMD\.GodClass|PMD\.CyclomaticComplexity|PMD\.TooManyMethods|PMD\.AvoidDeeplyNestedIfStmts|PMD\.AvoidSynchronizedStatement|PMD\.CommentDefaultAccessModifier|PMD\.ShortClassName|PMD\.AvoidInstantiatingObjectsInLoops|PMD\.ImplicitFunctionalInterface|PMD\.LinguisticNaming|PMD\.CouplingBetweenObjects|PMD\.ShortVariable).)*$"/>
       <message key="suppressed.warning.not.allowed"
         value="The warning ''{0}'' cannot be suppressed at this location.
            Allowed suppressions: unchecked, deprecation, rawtypes, resource,
            ClassDataAbstractionCoupling, ClassFanOutComplexity, AvoidInlineConditionals,
            DeclarationOrder, MethodLength, AbbreviationAsWordInName,
            PMD.GodClass, PMD.CyclomaticComplexity, PMD.TooManyMethods, PMD.AvoidDeeplyNestedIfStmts,
-           PMD.AvoidSynchronizedStatement, PMD.CommentDefaultAccessModifier, PMD.ShortClassName.
+           PMD.AvoidSynchronizedStatement, PMD.CommentDefaultAccessModifier, PMD.ShortClassName,
+           PMD.AvoidInstantiatingObjectsInLoops, PMD.ImplicitFunctionalInterface,
+           PMD.LinguisticNaming, PMD.CouplingBetweenObjects, PMD.ShortVariable.
            All suppressions require a preceding comment explaining justification.
            For IntelliJ inspections, use @noinspection javadoc tag."
       />
